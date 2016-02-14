@@ -80,7 +80,7 @@
 
 \begin{block}{Introduction}
 \begin{itemize}	
-\item For hundreds of years, everyone dreams to predict stock price changes. Numerous studies have shown that stock could be predicted to some degree. 
+\item Everyone dreams to predict stock price changes. Some even succeeded -- to some degree. 
 \item China stock market is influenced by rumors on social media.
 \end{itemize}
 \centering
@@ -90,8 +90,8 @@
 	\label{intro}
 \end{figure}
 \begin{itemize}
- \item We design and implement a real-time data stream stock prediction system based on IBM SuperVessel Cloud.  
-\item With the system, we can perform stock prediction based on multiple data sources, including trading data and social media rumors. 
+\item We build a real-time data stream stock prediction system on IBM SuperVessel Cloud.  
+\item We can use multiple data sources, including trading data and social media rumors. 
 
 \end{itemize}
 \end{block}
@@ -103,10 +103,10 @@
 \begin{block}{Contribution}
 
 \begin{itemize}
-\item Build a system to process real-time data stream from multiple sources. 
+\item A system to process real-time data stream from multiple sources. 
 \item Use multi data source, including trading data and social rumors, to predict stock market in China.
-\item Leverage the state-of-the-art cloud technology to provide a scalable system. 
-\item Provide an intuitive web UI to let users edit and analyze related information.
+\item A scalable system using the state-of-the-art cloud technology. 
+\item An intuitive web UI to let users edit and analyze code and data.
 \end{itemize}
 \centering
 \begin{figure}
@@ -127,10 +127,9 @@
 
 %\begin{column}{.56\textwidth} % The first subdivided column within the first main column
 
-Currently we have the following datasets and we are adding more. 
 \begin{itemize}
-\item SSE50 index. We use its daily closing price. This is also our predicting target.
-\item Sina Stock Forum. We use posts and comments from \href{http://guba.sina.com.cn}{Sina Guba}.
+\item SSE50 index history. Daily closing price. Also our predicting target.
+\item Sina Stock Forum. Posts and comments from http://guba.sina.com.cn.
 
 %\end{column}
 
@@ -139,9 +138,9 @@ Currently we have the following datasets and we are adding more.
 %\end{column}
 %\end{columns} % End of the subdivision
 
-\item Financial news. These news are collected by Tushare website.
-\item NASQAF index. We use its daily closing price.
-\item RMB Exchange rate. We use its daily value.
+\item Financial news. Collected from Tushare.
+\item NASQAF index. Daily closing price.
+\item RMB Exchange rate. Daily value.
 \end{itemize}
 
 \centering
@@ -157,7 +156,12 @@ Currently we have the following datasets and we are adding more.
 \begin{block}{Data Pre-Processing}
 
 \begin{itemize}
-\item We perform multi-step data pre-processing on cloud-based streaming system. For data like rumors and news, we extract their sentiment as features, just like the left figure shows. For trading history data, we use their values within a certain window, as the right figure shows. 
+\item Leveraging the cloud to do multi-step data pre-processing as streams. 
+
+\item Rumors and news $\rightarrow$ sentiment (left figure)
+
+\item Trading history $\rightarrow$ values within a certain window (right figure)
+
 \begin{columns} % Subdivide the first main column
 \begin{column}{.4\textwidth} 
 	\begin{figure}
@@ -200,8 +204,10 @@ Currently we have the following datasets and we are adding more.
 		%\caption{System Architecture}
 	\end{figure}
 \begin{itemize}
-\item Components in our system include Spark, HDFS, Gitlab, Django. They all run efficiently on SuperVessel Cloud. 
-\item Our system integrates the acquisition, preprocessing and learning of data source streams, and shows the final prediction result. Users can monitor the whole process all from a single web UI. They can change the model parameters, modify the codes, and check the running status online.
+\item Building blocks: Spark, HDFS, Gitlab, Django
+\item They all run efficiently on IBM SuperVessel Cloud. 
+\item Integrates the acquisition, preprocessing and learning of data source streams, and shows the final prediction result. 
+\item Everything under a single web UI. Users can change the model parameters, modify the codes, and check the running status online.
 
 \end{itemize}
 
@@ -238,8 +244,10 @@ Currently we have the following datasets and we are adding more.
 \end{columns}
 
 \begin{itemize}
-\item This Project is developed on SuperVessel Cloud, which  is based on OpenPOWER technology and provides the high efficiency cognitive computing infrastructure for frontier science with high performance heterogenous platform (GPU/FPGA).
-\item SuperVessel consists of three parts: basic cognitive cloud service, cognitive computing service platform, and application acceleration store for new technology sharing. 
+\item We use SuperVessel Cloud, based on OpenPOWER technology and provides the high efficiency cognitive computing infrastructure for frontier science with high performance heterogenous platform (GPU/FPGA).
+
+\item SuperVessel provides three handy services: basic cognitive cloud service, cognitive computing service platform, and application acceleration store for new technology sharing. 
+
 \item SuperVessel provides us with a scalable and easy-to-maintain cloud infrastructure to build our systems on. 
 \end{itemize}
 
@@ -259,7 +267,8 @@ Currently we have the following datasets and we are adding more.
 
 \begin{itemize}
 \item Using multiple data sources improves stock prediction. 
-\item Cloud technology provides us with high efficiency cognitive computing infrastructure, makes it simple for users to analyze in an intuitive web UI.
+\item We can provide the entire analysis under an intuitive web UI.
+\item Highly efficient cognitive computing infrastructure at SuperVessel greatly simplified our development.
 \end{itemize}
 
 \end{block}
@@ -271,8 +280,9 @@ Currently we have the following datasets and we are adding more.
 \begin{block}{Acknowledgments}
 
 \begin{itemize}
-\item Thank IBM China Research Lab for providing computing resources on SuperVessel Cloud. 
-\item Thank Tushare website for providing datasets. 
+\item IBM China Research Lab provided the SuperVessel Cloud. 
+\item IBM partly funded this project.
+\item Tushare website provided datasets. 
 \end{itemize}
 
 \end{block}
